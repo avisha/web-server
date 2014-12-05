@@ -40,16 +40,11 @@ The server will look for a config.properties and log.properties in the current d
 Example Config file:
 ###########################################
 
-hostname=localhost
-port=80
-threadPoolSize=10
-requestQueueMaxSize=10000
-requestTimeOut=100
-readTimeOut=100
-documentRoot=C:\\Users\\mahaur\\Desktop
-keepAlive=true
-adminMode=true
-
+HostName=localhost
+Port=9191
+ThreadPoolSize=10
+HostPath=F:\\Test
+UploadPath=directory
 ###########################################
 
 Guide to Configuration:
