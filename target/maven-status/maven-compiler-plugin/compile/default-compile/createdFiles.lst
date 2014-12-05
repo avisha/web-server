@@ -1,0 +1,15 @@
+com\adobe\web\server\ThreadPoolProvider.class
+com\adobe\web\utils\ResponseCodeParams.class
+com\adobe\web\client\WebClient.class
+com\adobe\web\readers\Reader.class
+com\adobe\web\readers\PostRequestProcess.class
+com\adobe\web\server\HTTPWebServer.class
+com\adobe\web\readers\GetRequestProcess.class
+com\adobe\web\server\MalformedRequestException.class
+com\adobe\web\readers\DeleteRequestProcess.class
+com\adobe\web\utils\WebServerConstants.class
+com\adobe\web\readers\MultipartRequestProcess.class
+com\adobe\web\readers\HeaderHandler.class
+com\adobe\web\utils\MimeTypeHandler.class
+com\adobe\web\server\Handler.class
+com\adobe\web\readers\GenericHTTPRequestReader.class

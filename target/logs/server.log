@@ -1,0 +1,24 @@
+"39 0 [main] INFO  com.adobe.web.server.HTTPWebServer - Initializing server properties by reading from properties file
+""65 14 [main] TRACE com.adobe.web.server.HTTPWebServer - Server is started on the port 9191
+""114 15 [main] INFO  com.adobe.web.server.HTTPWebServer - enter e for stopping the server
+""128 9911 [pool-1-thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\index.html
+""128 10000 [pool-1-thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-frame.html
+""128 10008 [pool-1-thread-4] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\allclasses-frame.html
+""135 10016 [pool-1-thread-4] ERROR com.adobe.web.readers.Reader - error in reading and writing to streamSoftware caused connection abort: socket write error
+""128 10020 [pool-1-thread-5] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-summary.html
+""128 10398 [pool-1-thread-6] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\stylesheet.css
+""128 10649 [pool-1-thread-7] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\background.gif
+""128 10733 [pool-1-thread-8] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\tab.gif
+""128 10752 [pool-1-thread-9] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar.gif
+""128 10758 [pool-1-thread-10] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar_end.gif
+""128 15095 [pool-1-thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\upload.html
+""185 15099 [pool-1-thread-1] INFO  com.adobe.web.readers.GetRequestProcess - file requested does not exist - upload.html
+""128 19108 [pool-1-thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\readme.txt
+""120 26091 [pool-1-thread-3] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 26091 [pool-1-thread-4] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 26091 [pool-1-thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 26091 [pool-1-thread-6] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 38195 [pool-1-thread-7] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 48195 [pool-1-thread-9] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""120 48195 [pool-1-thread-8] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+"
