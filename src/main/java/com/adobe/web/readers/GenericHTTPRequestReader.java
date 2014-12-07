@@ -75,7 +75,7 @@ public class GenericHTTPRequestReader {
 			 logger.error("request uri could not decoded . " +e2.getMessage());
 			Reader.serverFormattedResponseToClient("500",
 					"Internal Server Error", "url could not be decoded",
-					charStreamOutput, outputStream);
+					charStreamOutput, outputStream,"close");
 		}
 
 		return decodedURI;

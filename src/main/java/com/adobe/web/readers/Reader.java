@@ -87,14 +87,14 @@ public class Reader {
 	public static void clientResponseWithBody(String statusCode,
 			String responseMessage, File fileObject,
 			BufferedWriter charStreamBufferedOut,
-			BufferedOutputStream byteStreamBufferedOut) throws IOException {
+			BufferedOutputStream byteStreamBufferedOut,String Connection) throws IOException {
 		StringBuffer outputMessage = new StringBuffer(100);
 		outputMessage.append("HTTP/1.1" + " " + statusCode + " "
 				+ responseMessage);
 		outputMessage.append(WebServerConstants.CRLF);
 		outputMessage.append("Date:" + getServerTime());
 		outputMessage.append(WebServerConstants.CRLF);
-		outputMessage.append("Connection: close");
+		outputMessage.append("Connection: "+Connection);
 		outputMessage.append(WebServerConstants.CRLF);
 
 		BufferedInputStream fileInput = null;
@@ -149,7 +149,7 @@ public class Reader {
 	public static void serverFormattedResponseToClient(String statusCode,
 			String responseMessage, String formattedMessageBody,
 			BufferedWriter charStreamBufferedOut,
-			BufferedOutputStream byteStreamBufferedOut)
+			BufferedOutputStream byteStreamBufferedOut,String Connection)
 			throws FileNotFoundException {
 
 		
@@ -160,7 +160,7 @@ public class Reader {
 		outputMessage.append(WebServerConstants.CRLF);
 		outputMessage.append("Date:" + getServerTime());
 		outputMessage.append(WebServerConstants.CRLF);
-		outputMessage.append("Connection: close");
+		outputMessage.append("Connection: "+Connection);
 		outputMessage.append(WebServerConstants.CRLF);
 
 		
@@ -207,9 +207,9 @@ public class Reader {
 		}
 
 		body = "<HTML>" + "<HEAD>" + "<TITLE>" + responseMessage + "</TITLE>"
-				+ "</HEAD>" + "<BODY>" + "<H3>" + statusCode + ". "
-				+ responseMessage + "</H3>" + "</BR>" + "<p>" + messageBody
-				+ "</p>" + "</BODY>" + "</HTML>";
+				+ "</HEAD>" + "<BODY>" + "<H3><center><font size=10>" + statusCode + ". "
+				+ responseMessage + "</font></center></H3>" + "</BR>" + "<p><center><font size=6>" + messageBody
+				+ "</font></center></p>" + "</BODY>" + "</HTML>";
 
 		return body;
 
@@ -241,7 +241,7 @@ public class Reader {
 			Reader.serverFormattedResponseToClient(ResponseCodeParams.FILE_NOT_FOUND, "Not Found",
 					"the file you requested - " + file.getName()
 							+ " does not exist on server" + "<hr>",
-					charStreamBufferedOut, outputStream);
+					charStreamBufferedOut, outputStream,"close");
 			logger.info("file requested does not exist - " + file.getName());
 
 		}

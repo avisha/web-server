@@ -5,10 +5,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
+
 
 import com.adobe.web.utils.WebServerConstants;
 
@@ -23,9 +28,10 @@ public class HTTPWebServer {
 
 	private static Logger logger = Logger.getLogger(HTTPWebServer.class
 			.getName());
+	 private static HTTPRequestHandler handler=null;
 
-	private static Thread handlerThread;
 
+	
 	/**
 	 * This method will read properties from config file This will initialize
 	 * the server properties
@@ -48,6 +54,9 @@ public class HTTPWebServer {
 		WebServerConstants.HOSTPATH = properties.getProperty("HostPath");
 		WebServerConstants.THREAD_POOL_SIZE = Integer.parseInt(properties
 				.getProperty("ThreadPoolSize"));
+		WebServerConstants.requestTimeOut=Integer.parseInt(properties.getProperty("requestTimeOut"));
+		WebServerConstants.QUEUE_SIZE=Integer.parseInt(properties.getProperty("requestQueueMaxSize"));
+		
 
 	}
 
@@ -58,12 +67,11 @@ public class HTTPWebServer {
 	 */
 	public void serverStart() throws InterruptedException {
 
-		Handler thread = new Handler();
-		handlerThread = new Thread(thread);
-		handlerThread.start();
+		 handler=new HTTPRequestHandler();
+		handler.serverStart();
 
-		logger.trace("Server is started on the port " + WebServerConstants.PORT);
 	}
+	
 
 	/**
 	 * this method will stop the server
@@ -71,10 +79,11 @@ public class HTTPWebServer {
 	 * @throws InterruptedException
 	 */
 	public  void serverStop() throws InterruptedException {
+		handler.serverStop();
+		
+		
 
-		handlerThread.interrupt();
-		handlerThread.join();
-
+		
 	}
 
 	/**

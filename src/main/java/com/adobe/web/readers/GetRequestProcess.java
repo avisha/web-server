@@ -30,6 +30,7 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 	public Hashtable<String, String> getFields;
 	private static Logger logger = Logger.getLogger(GetRequestProcess.class
 			.getName());
+	private static String connectionStatus;
 
 	/**
 	 * It initializes the stream connected to client
@@ -59,8 +60,10 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 			MalformedRequestException {
 
 		Hashtable<String, String> getHeaders = getAllHeaders();
+		connectionStatus=getHeaders.get("Connection");
+
 		String decodedUri = decodeURI(requestUri);
-		
+
 		if (decodedUri == null) {
 			logger.error("the decoded uri is null");
 			return;
@@ -75,7 +78,7 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 			Reader.serverFormattedResponseToClient("404", "File Not Found",
 					"the file you requested - " + decodedUri
 							+ " does not exist on server" + "<hr>",
-					charStreamOutput, outputStream);
+					charStreamOutput, outputStream, "close");
 
 			logger.error("the requested file doesnot exists on the server.Regret for inconvenience");
 
@@ -93,7 +96,7 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 			return;
 		}
 		Reader.clientResponseWithBody("200", "OK", file, charStreamOutput,
-				outputStream);
+				outputStream, connectionStatus);
 
 	}
 
@@ -105,6 +108,7 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 	 */
 	public static String requestedPath(String requestUri) {
 		String resourcePath = null;
+		
 
 		if (requestUri.equals("/")) {
 			resourcePath = WebServerConstants.HOSTPATH + File.separator
@@ -120,12 +124,11 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 				if (pathList[i] != null && pathList[i].length() > 0)
 					outputResource.append(File.separator + pathList[i]);
 			}
-			if(outputResource!=null){
-				
-			
-			resourcePath = WebServerConstants.HOSTPATH
-					+ outputResource.toString();
-			logger.info("resource path i.e file path is "+resourcePath);
+			if (outputResource != null) {
+
+				resourcePath = WebServerConstants.HOSTPATH
+						+ outputResource.toString();
+				logger.info("resource path i.e file path is " + resourcePath);
 			}
 
 		}
@@ -160,7 +163,8 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 				"200",
 				"OK",
 				"The location you requested is a folder. Please follow links below to browse through the files .. <hr>"
-						+ htmlLinks.toString(), charStreamOutput, outputStream);
+						+ htmlLinks.toString(), charStreamOutput, outputStream,
+				connectionStatus);
 		return;
 	}
 
@@ -181,7 +185,7 @@ public class GetRequestProcess extends GenericHTTPRequestReader {
 					ResponseCodeParams.FILE_NOT_FOUND, "File Not Found",
 					"the file you requested - " + file.getName()
 							+ " does not exist on server" + "<hr>",
-					charStreamOutput, outputStream);
+					charStreamOutput, outputStream, "close");
 			logger.info("file requested does not exist - " + file.getName());
 
 		}

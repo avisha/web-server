@@ -28,7 +28,8 @@ import com.adobe.web.utils.WebServerConstants;
  * @author avijain
  * 
  */
-public class WebClient implements Runnable {
+
+public class WebClient{
 
 	private BufferedInputStream inputStream = null;
 	private BufferedOutputStream outputstream = null;
@@ -52,8 +53,8 @@ public class WebClient implements Runnable {
 
 	}
 
-	@Override
-	public void run() {
+	 
+	public void handleClient(){
 		try {
 
 			inputStream = new BufferedInputStream(clientSocket.getInputStream());
@@ -108,7 +109,7 @@ public class WebClient implements Runnable {
 						ResponseCodeParams.METHOD_NOT_ALLOWED,
 						"Method not allowed",
 						"the  HTTP method you requested is not supported by the server",
-						charStream, outputstream);
+						charStream, outputstream,"close");
 
 			}
 		} catch (IOException ioException) {
@@ -121,7 +122,7 @@ public class WebClient implements Runnable {
 					+ malformedRequestException.getMessage());
 			try {
 				Reader.serverFormattedResponseToClient(ResponseCodeParams.BAD_REQUEST,
-						"Bad request","the request uri is not applicable" ,charStream, outputstream);
+						"Bad request","the request uri is not applicable" ,charStream, outputstream,"close");
 			} catch (FileNotFoundException e) {
 				logger.error("the requested uri is not applicable"+e.getMessage());
 			}

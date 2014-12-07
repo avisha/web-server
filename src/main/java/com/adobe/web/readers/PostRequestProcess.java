@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import java.util.Iterator;
 
 
+
 import com.adobe.web.server.MalformedRequestException;
 import com.adobe.web.utils.ResponseCodeParams;
 import com.adobe.web.utils.WebServerConstants;
@@ -36,6 +37,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 
 	private static Logger logger = Logger.getLogger(PostRequestProcess.class
 			.getName());
+	private static String connectionStatus;
 
 	/**
 	 * This will create a postRequestProcess object and initialize that with the
@@ -65,6 +67,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 	public void handlePostRequest(String requestUri) throws IOException,
 			MalformedRequestException {
 		Hashtable<String, String> headerList = getAllHeaders();
+		 connectionStatus=headerList.get("Connection");
 		String decodedUri = decodeURI(requestUri);
 		if (decodedUri == null) {
 			logger.error("the requested uri cannot be decoded");
@@ -82,7 +85,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 						"Not Found",
 
 						"neither the location requested nor default location is available for upload of files"
-								+ "<hr>", charStreamOutput, outputStream);
+								+ "<hr>", charStreamOutput, outputStream,"close");
 				logger.info("upload location could not be created due to some security restrictions - ");
 				return;
 			}
@@ -118,7 +121,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 
 				Reader.serverFormattedResponseToClient(ResponseCodeParams.OK,
 						"OK", "request recieved and processed<hr>",
-						charStreamOutput, outputStream);
+						charStreamOutput, outputStream,connectionStatus);
 
 			}
 
@@ -169,7 +172,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 								ResponseCodeParams.BAD_REQUEST,
 								"Bad request",
 								"boundary value not available in multipart request",
-								charStreamOutput, outputStream);
+								charStreamOutput, outputStream,"close");
 					} catch (FileNotFoundException e) {
 						logger.error("File cannot be found" + e.getMessage());
 					}
@@ -193,7 +196,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 				Reader.serverFormattedResponseToClient(
 						ResponseCodeParams.BAD_REQUEST, " Bad Request",
 						"Content-length" + " should be properly set" + "<hr>",
-						charStreamOutput, outputStream);
+						charStreamOutput, outputStream,"close");
 			} catch (FileNotFoundException e) {
 
 				logger.error("file cannot be found..it is a bad request"
@@ -276,7 +279,7 @@ public class PostRequestProcess extends GenericHTTPRequestReader {
 				"Created",
 
 				"your data has been uploaded to the server. please follow the below links to check uploaded data<hr>"
-						+ HtmlLinks.toString(), charStreamOutput, outputStream);
+						+ HtmlLinks.toString(), charStreamOutput, outputStream,"close");
 	}
 
 	

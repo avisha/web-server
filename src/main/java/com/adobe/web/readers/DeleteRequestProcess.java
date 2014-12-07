@@ -32,7 +32,7 @@ public class DeleteRequestProcess extends GenericHTTPRequestReader  {
 		if(decodedUri.equals(WebServerConstants.URISeparator)){
 			
 			Reader.serverFormattedResponseToClient("404","Resource not found","the file you requested - " + decodedUri
-					+ " does not exist on server" + "<hr>",charStreamOutput,outputStream);
+					+ " does not exist on server" + "<hr>",charStreamOutput,outputStream,"close");
 				
 		}
 		String resourcePath=requestedPath(decodedUri );
@@ -42,7 +42,7 @@ public class DeleteRequestProcess extends GenericHTTPRequestReader  {
 		if(file==null){
 			System.out.println("file length"+file.length());
 			Reader.serverFormattedResponseToClient("404", "File Not Found","the file you requested - " + decodedUri
-					+ " does not exist on server" + "<hr>", charStreamOutput, outputStream);
+					+ " does not exist on server" + "<hr>", charStreamOutput, outputStream,"close");
 	
 			//logger.error("the requested file doesnot exists"
 				//	);
