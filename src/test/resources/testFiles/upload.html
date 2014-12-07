@@ -1,47 +1,64 @@
-<!doctype html>
-<html>
-	<head>
-		<style>
-			*{margin:0; padding:0; border:0;}
-			body{font-family: "Arial";}
-			header{background: #579ad0; color: #fff;}
-			.container{width: 980px;margin: 0 auto;}
-			header ul {list-style-type: none;}
-			header ul li {padding: 14px 10px; text-align: center;display: inline-block; width: 22%; }
-			header ul li a {text-decoration: none; padding: 10px 15px;width: 100%; color: #fefefe;}
-			header ul li:hover{background: #359AF2;color: #fff;}
-			header ul li a:hover{color: #fff;}
-			.content{margin: 15%; 30px;text-align:center;}
-			.content h1{font-size: 60px;}
-			footer{padding: 7px 5px; background: #579ad0; color: #fff;font-size: 12px;text-align:center;position: fixed; bottom: 0;width: 100%;}
-			a.big_btn{background: #579ad0; color: #fff; width: 250px; padding: 15px; text-align: center; margin: 35px; text-decoration: none; display: inline-block;}
-			a.big_btn:hover{background: #359AF2; color: #fff;}
-		</style>
-	</head>
-	<body>
-		<header>
-			<div class="container">
-				<ul>
-					<li>
-						<p>Upload file on server</p>
-					</li>
-					
-				</ul>
-			</div>
-		</header>
-		</br>
-		</br>
-		</br>
-		</br>
-		</br>
-		<form method="post" action="" name="submit" enctype="multipart/form-data">
-  <input type="file" name="UPLOAD"><br/><br/>
-  <input type="file" name="UPLOAD"><br/><br/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    <title>Upload File on server</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/upload.css" rel="stylesheet">
+
+    
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Upload File on server</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+	
+<body bgcolor="#E6E6FA"> 
+<form method="post" action="" name="submit" enctype="multipart/form-data">
+  <input type="file" name="UPLOAD" value="Choose File"><br/><br/>
+   <input type="file" name="UPLOAD" value="Choose File"><br/><br/>
  
   <input type="submit" name="submit" value="Submit">
 </form>
-		<footer>
-			Copyright &copy; 2014 - Adobe Systems India
-		</footer>
-	</body>
+      
+
+    </div>
+	<!-- /.container -->
+	
+
+
+     </body>
 </html>
