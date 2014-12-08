@@ -1,1 +1,4 @@
+com.adobe.web.client
+com.adobe.web.readers
 com.adobe.web.server
+com.adobe.web.utils
