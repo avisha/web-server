@@ -30,7 +30,7 @@ The Webserver supports get and post requests. Since a server can decide on its o
 	== Usage ==
 
 To simply run this server 
-->click webserver.bat file in windows
+->click run.bat file in windows
 
 Java command to run the server is 
 java -cp webserver.jar com.adobe.web.server.HttpWebServerRun
