@@ -30,7 +30,7 @@ The Webserver supports get and post requests. Since a server can decide on its o
 	== Usage ==
 
 To simply run this server 
-->click webserver.bat file in windows
+->click run.bat file in windows
 
 Java command to run the server is 
 java -cp webserver.jar com.adobe.web.server.HttpWebServerRun
@@ -69,7 +69,7 @@ log4j.rootLogger=INFO, file
 # Direct log messages to a log file
 
 log4j.appender.file=org.apache.log4j.RollingFileAppender
-log4j.appender.file.File=C:\\Users\\mahaur\\loging.log
+log4j.appender.file.File=C:\\Users\\avijain\\web-server\\loging.log
 log4j.appender.file.MaxFileSize=1MB
 log4j.appender.file.MaxBackupIndex=1
 log4j.appender.file.layout=org.apache.log4j.PatternLayout
