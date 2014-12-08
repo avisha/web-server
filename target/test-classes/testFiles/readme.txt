@@ -43,8 +43,12 @@ Example Config file:
 HostName=localhost
 Port=9191
 ThreadPoolSize=10
-HostPath=F:\\Test
+HostPath=C:\\Users\\avijain\\web-server\\src\\test\\resources\\testFiles
 UploadPath=directory
+requestQueueMaxSize=10000
+requestTimeOut=1000
+readTimeOut=1000
+
 ###########################################
 
 Guide to Configuration:

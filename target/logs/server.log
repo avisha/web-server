@@ -1,24 +1,41 @@
-"39 0 [main] INFO  com.adobe.web.server.HTTPWebServer - Initializing server properties by reading from properties file
-""65 14 [main] TRACE com.adobe.web.server.HTTPWebServer - Server is started on the port 9191
-""114 15 [main] INFO  com.adobe.web.server.HTTPWebServer - enter e for stopping the server
-""128 9911 [pool-1-thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\index.html
-""128 10000 [pool-1-thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-frame.html
-""128 10008 [pool-1-thread-4] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\allclasses-frame.html
-""135 10016 [pool-1-thread-4] ERROR com.adobe.web.readers.Reader - error in reading and writing to streamSoftware caused connection abort: socket write error
-""128 10020 [pool-1-thread-5] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-summary.html
-""128 10398 [pool-1-thread-6] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\stylesheet.css
-""128 10649 [pool-1-thread-7] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\background.gif
-""128 10733 [pool-1-thread-8] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\tab.gif
-""128 10752 [pool-1-thread-9] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar.gif
-""128 10758 [pool-1-thread-10] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar_end.gif
-""128 15095 [pool-1-thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\upload.html
-""185 15099 [pool-1-thread-1] INFO  com.adobe.web.readers.GetRequestProcess - file requested does not exist - upload.html
-""128 19108 [pool-1-thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\readme.txt
-""120 26091 [pool-1-thread-3] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 26091 [pool-1-thread-4] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 26091 [pool-1-thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 26091 [pool-1-thread-6] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 38195 [pool-1-thread-7] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 48195 [pool-1-thread-9] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
-""120 48195 [pool-1-thread-8] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+"45 0 [main] INFO  com.adobe.web.server.HTTPWebServer - Initializing server properties by reading from properties file
+""132 28 [main] INFO  com.adobe.web.server.HTTPRequestHandler - Starting server on port 9191
+""140 29 [main] TRACE com.adobe.web.server.HTTPRequestHandler - Server is started on the port 9191
+""131 7145 [Thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\bootstrap.min.css
+""131 7160 [Thread-4] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\content.css
+""131 7163 [Thread-6] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\js\ie-emulation-modes-warning.js
+""131 8753 [Thread-8] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\index.html
+""131 8826 [Thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-frame.html
+""131 8829 [Thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\allclasses-frame.html
+""131 8857 [Thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\overview-summary.html
+""131 8892 [Thread-4] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\stylesheet.css
+""131 8971 [Thread-8] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\background.gif
+""131 9014 [Thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\stylesheet.css
+""131 9063 [Thread-7] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\background.gif
+""131 9071 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\tab.gif
+""131 9074 [Thread-5] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar.gif
+""131 9078 [Thread-0] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\titlebar_end.gif
+""131 10924 [Thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\com\adobe\web\client\package-frame.html
+""131 10980 [Thread-6] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\stylesheet.css
+""131 11013 [Thread-4] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\javadocs\resources\background.gif
+""131 15511 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\upload.html
+""131 15555 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\bootstrap.min.css
+""131 15572 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\upload.css
+""370 23857 [Thread-3] INFO  com.adobe.web.readers.MultipartRequestProcess - file created successfully at location - C:\Users\avijain\web-server\src\test\resources\testFiles\directory\2013-11-15 11.32.48.jpg
+""226 23858 [Thread-3] ERROR com.adobe.web.readers.MultipartRequestProcess - file name is wrong and hence returning null
+""268 23858 [Thread-3] TRACE com.adobe.web.readers.MultipartRequestProcess - the list of files uploaded is returned
+""104 23858 [Thread-3] TRACE com.adobe.web.readers.PostRequestProcess - file is uploaded on the server with the appropriate response
+""131 25435 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\directory\2013-11-15 11.32.48.jpg
+""131 28568 [Thread-3] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\upload.html
+""131 33613 [Thread-5] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\readme.txt
+""121 41600 [Thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""121 41603 [Thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""121 41606 [Thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""121 53865 [Thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""121 53867 [Thread-5] ERROR com.adobe.web.client.WebClient - uri is not properly formedthe request line is malformed
+""131 101453 [Thread-8] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\bootstrap.min.css
+""131 101463 [Thread-6] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\content.css
+""131 101463 [Thread-5] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\js\ie-emulation-modes-warning.js
+""131 101773 [Thread-1] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\bootstrap.min.css
+""131 101793 [Thread-2] INFO  com.adobe.web.readers.GetRequestProcess - resource path i.e file path is C:\Users\avijain\web-server\src\test\resources\testFiles\css\content.css
 "
